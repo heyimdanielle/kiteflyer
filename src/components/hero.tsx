@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 export default function Hero() {
   return (
     <section className="py-24 px-6 text-center bg-gradient-to-b from-indigo-100 to-white shadow-lg rounded-lg">
@@ -30,10 +32,12 @@ export default function Hero() {
 
       <div className="mt-14 flex flex-wrap justify-center gap-8 grayscale opacity-80">
         {["airtable", "google-drive", "canva", "slack"].map((logo) => (
-          <img
+          <Image
             key={logo}
             src={`/integrations/${logo}.svg`}
             alt={`${logo} logo`}
+            width={32}
+            height={32}
             className="h-8 hover:opacity-100 transition-opacity duration-300"
           />
         ))}

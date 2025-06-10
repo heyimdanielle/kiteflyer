@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 const testimonials = [
 	{
@@ -32,16 +33,18 @@ export default function Testimonials() {
 						key={index}
 						className="p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow"
 					>
-						<img
+						<Image
 							src={testimonial.image}
 							alt={testimonial.name}
+							width={64}
+							height={64}
 							className="w-16 h-16 mx-auto rounded-full"
 						/>
 						<h3 className="mt-4 text-xl font-semibold text-gray-700">
 							{testimonial.name}
 						</h3>
 						<p className="text-sm text-gray-500">{testimonial.role}</p>
-						<p className="mt-4 text-gray-600">"{testimonial.feedback}"</p>
+						<p className="mt-4 text-gray-600">&quot;{testimonial.feedback}&quot;</p>
 					</div>
 				))}
 			</div>

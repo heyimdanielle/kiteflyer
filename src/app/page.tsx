@@ -19,9 +19,6 @@ export default function Home() {
         <Features />
         <UseCases />
         <div className="flex justify-center space-x-4 mt-8">
-          <Link href="/login" className="px-4 py-2 bg-indigo-600 text-white rounded hover:bg-indigo-700">
-            Login
-          </Link>
           <Link href="/signup" className="px-4 py-2 bg-gray-200 text-gray-800 rounded hover:bg-gray-300">
             Sign Up
           </Link>
